@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body{
+    background-color: #000;
+    font-family: 'Dancing Script';
+}
+
+.cabecera {
+    color: #fff;
+    background-color: #5b7989;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px 20px 10px;
+    animation-name: animacion-cabecera;
+    animation-duration: 2s;
+}
+
+.cabecera h1{
+    text-shadow: 2px 2px #02010a;
+    margin: 0;
+}
+
+#menu {
+    margin-top: 10px;
+}
+
+#menu a {
+    font-size: 1.4em;
+    color: #fff;
+    margin-left: 20px;
+}
+
+/*estilo para pagina actual*/
+.pag-actual {
+    text-decoration: none;
+}
+
+/*estilos para imagenes*/
+img {
+    width: 90%;
+    box-shadow: 2px 2px 2px #02010a;
+}
+
+figure {
+    margin: 0;
+}
+.img-contenedor {
+    text-align: center;
+    padding: 25px;
+}
+
+#img-central {
+    background-color: #82c3a6;
+}
+
+#img-sencundaria {
+    background-color: #d5c75f;
+    /*border: 1px solid;*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#img-paisaje:hover {
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 2px #82c3a6;
+    border: 2px solid;
+    position: relative;
+}
+
+#img-retrato:hover {
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px 2px #82c3a6;
+    border: 2px solid;
+}
+
+.galeria {
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.contenedor-galeria {
+    background-color: #d5c75f;
+    padding: 30px 0;
+    margin-bottom: -20px;
+}
+
+.pie-pagina {
+    border-radius: 0 0 10px 10px;
+    background-color: #C6d5c5;
+    padding: 10px 20px;
+}
+
+.pie-pagina div {
+    margin: 0 4px;
+}
+/*css para Destock*/
+@media screen and (min-width: 900px) {
+    #contenido {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    .cabecera h1{
+        float: left;
+    }
+
+    #menu {
+        text-align: right;
+    }
+
+    #img-sencundaria,
+    .galeria,
+    .pie-pagina {
+        display: -webkit-flex;
+        display: flex;
+    }
+    
+    #img-sencundaria div,
+    .galeria div,
+    .pie-pagina div {
+        -webkit-flex: 1;
+        flex: 1;
+    }
+}
+
+/*css para Movil*/
+@media screen and (max-width: 899px) {
+    #contenido {
+        width: 100%;
+    }
+
+    .cabecera h1{
+        text-align: center;
+    }
+
+    #menu {
+        text-align: center;
+    }
+
+    #img-sencundaria div,
+    .galeria div {
+        margin: 10px;
+    }
+}
+
+
+/*filtros para galeria*/
+.img-blur {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.img-grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.img-sepia {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+/* animacion */
+@keyframes animacion-cabecera {
+    0% {margin-top: 150%;}
+    60% {margin-top: -5%;}
+    100% {margin-top: 0%;}
+}
